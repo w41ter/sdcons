@@ -1,0 +1,39 @@
+[package]
+name = "simplekv"
+version = "0.1.0"
+authors = ["p4tr1ck <patricknicholas@foxmail.com>"]
+edition = "2018"
+
+[dependencies]
+sdcons = { version = "0.1.0", path = "../" }
+serde = { version = "1.0" }
+serde_json = { version = "1.0.0" }
+futures = "0.3.13"
+tarpc = { version = "0.25.1", features = ["full"] }
+tokio = { version = "1.0", features = ["full"] }
+tokio-serde = { version = "0.8", features = ["json"] }
+async-trait = { version = "0.1.48" }
+anyhow = { version = "1.0" }
+thiserror = { version = "1.0" }
+log = { version = "0.4" }
+toml = { version = "0.5.6" }
+clap = { version = "2.33.0" }
+chrono = { version = "0.4" }
+rocksdb = { version = "0.15" }
+byteorder = { version = "1.4.3" }
+static_assertions = { version = "1.1.0" }
+crc = { version = "1.8.1" }
+rustyline = { version = "8.0.0" }
+lazy_static = { version = "1.4.0" }
+
+[lib]
+name = "base"
+path = "base/lib.rs"
+
+[[bin]]
+name = "kv-server"
+path = "server/server.rs"
+
+[[bin]]
+name = "kv-client"
+path = "client/client.rs"

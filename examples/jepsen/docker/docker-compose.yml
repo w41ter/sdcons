@@ -1,0 +1,46 @@
+version: '3.7'
+x-node:
+  &default-node
+  image: sdcons_jepsen
+  env_file: ./secret/node.env
+  privileged: true
+  volumes:
+    - ${PWD}/run:/root/run
+  networks:
+    - jepsen
+  ports:
+    - ${JEPSEN_PORT:-22}
+
+services:
+  base:
+    image: sdcons_jepsen
+    build: ./node
+    env_file: ./secret/node.env
+    volumes:
+      - ${PWD}/run:/root/run
+    privileged: true
+
+  n1:
+    << : *default-node
+    container_name: sdcons-jepsen-n1
+    hostname: n1
+  n2:
+    << : *default-node
+    container_name: sdcons-jepsen-n2
+    hostname: n2
+  n3:
+    << : *default-node
+    container_name: sdcons-jepsen-n3
+    hostname: n3
+  n4:
+    << : *default-node
+    container_name: sdcons-jepsen-n4
+    hostname: n4
+  n5:
+    << : *default-node
+    container_name: sdcons-jepsen-n5
+    hostname: n5
+
+networks:
+  jepsen:
+

@@ -1,0 +1,9 @@
+# see https://rust-lang.github.io/rustfmt/?version=master
+tab_spaces = 4
+indent_style = "Block"
+reorder_imports = true
+
+wrap_comments = true
+comment_width = 80
+
+fn_call_width = 80

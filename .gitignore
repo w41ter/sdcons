@@ -1,0 +1,11 @@
+/target/
+Cargo.lock
+/.vscode
+/chaos_run
+*.class
+/examples/jepsen/libs/
+/examples/jepsen/store/
+/examples/jepsen/target/
+/examples/jepsen/docker/hosts
+/examples/jepsen/docker/run/
+/examples/jepsen/docker/secret/
