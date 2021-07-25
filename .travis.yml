@@ -1,5 +1,4 @@
 language: rust
-sudo: required
 rust:
   - stable
   - beta
@@ -8,6 +7,12 @@ jobs:
   allow_failures:
     - rust: nightly
   fast_finish: true
+
+before_script:
+  - sudo apt-get -y install jq
+  - rustup component add llvm-tools-preview
+  - cargo install cargo-binutils
+  - cargo profdata -- --help
+
 script:
-  - cargo build --verbose
-  - cargo test --verbose
+  - bash -x scripts/test_coverage.sh
