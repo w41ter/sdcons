@@ -2,7 +2,7 @@
 
 # sdcons
 
-[![Build Status](https://travis-ci.org/PatrickNicholas/sdcons.svg?branch=master)](https://travis-ci.org/PatrickNicholas/sdcons)
+[![Build Status](https://travis-ci.com/PatrickNicholas/sdcons.svg?branch=master)](https://travis-ci.com/PatrickNicholas/sdcons)
 
 
 `sdcons` is an implementation of geo-replicated distributed consensus algorithm. It is based on the paper:
