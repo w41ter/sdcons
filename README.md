@@ -32,6 +32,15 @@ At present, sdcons has not performed benchmarking and related performance optimi
 
 See `examples/`.
 
+## Plan
+
+Here is some improvements need to code:
+
+- Applying committed entries without persistence
+- `Ready` add a field to describe the future working
+- Support asynchornous log entries persisting
+
 ## Acknowledgments
 
 Thanks etcd for providing the amazing Go implementation of raft!
+
