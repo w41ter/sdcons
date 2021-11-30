@@ -444,9 +444,7 @@ impl LogStorage {
 impl LogStorage {
     fn build_empty_storage(id: u64, wb: &mut rocksdb::WriteBatch) {
         let mut metas = MetaInfos::new(id);
-        metas
-            .committed_stats
-            .insert(constant::INDEX_CHANNEL_ID, 0);
+        metas.committed_stats.insert(constant::INDEX_CHANNEL_ID, 0);
         let init_state = InitialState {
             id: constant::INVALID_ID,
             term: constant::INITIAL_TERM,

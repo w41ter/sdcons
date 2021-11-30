@@ -17,10 +17,10 @@
 use std::collections::{HashMap, HashSet};
 
 use crate::constant::*;
-use crate::types::{ConfigStage, Entry, EntryMeta, HardState, MemberState};
+use crate::types::{ConfigStage, EntryMeta, HardState, MemberState};
 
-use chrono::{prelude::*, DateTime};
-use log::{debug, error, info, trace, warn};
+use chrono::prelude::*;
+use log::{debug, info, trace, warn};
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Role {
@@ -379,18 +379,10 @@ impl ChannelInfo {
     }
 
     pub fn reset_tick(&mut self) {
-        // debug!(
-        //     "node {} channel {} reset tick",
-        //     self.local_id, self.channel_id
-        // );
         self.elapsed_tick = 0;
     }
 
     pub fn on_receive_msg(&mut self, from: u64) {
-        // debug!(
-        //     "node {} channel {} receive msg from {}",
-        //     self.local_id, self.channel_id, from
-        // );
         if let Some(p) = self.progress_map.get_mut(&from) {
             p.on_receive_msg();
         }

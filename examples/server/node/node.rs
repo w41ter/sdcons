@@ -269,12 +269,7 @@ impl<F: FiniteStateMachine> Node<F> {
         Ok(())
     }
 
-    pub fn new(
-        id: u64,
-        path: &str,
-        fsm: F,
-        builder: DownloadBuilder,
-    ) -> Result<Node<F>, Error> {
+    pub fn new(id: u64, path: &str, fsm: F, builder: DownloadBuilder) -> Result<Node<F>, Error> {
         let storage = LogStorage::new(id, &format!("{}/wal", path))?;
         let mut opts = SdconsOption::default();
         let log_reader = LogReader {

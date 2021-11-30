@@ -16,7 +16,6 @@ use std::collections::HashMap;
 use std::fmt::Debug;
 use std::iter::Iterator;
 use std::net::SocketAddr;
-use std::ops::{Deref, DerefMut};
 use std::sync::{Arc, Mutex};
 
 use anyhow::Error;

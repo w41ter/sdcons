@@ -17,7 +17,7 @@
 use std::collections::{HashMap, HashSet, VecDeque};
 
 use chrono::prelude::*;
-use log::{debug, error, info, trace, warn};
+use log::{debug, info, trace, warn};
 use rand::{thread_rng, RngCore};
 
 use crate::constant::*;

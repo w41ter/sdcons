@@ -52,16 +52,16 @@ extern crate serde;
 extern crate thiserror;
 
 mod cons;
+mod error;
 mod progress;
 mod raw_node;
-mod error;
 
 pub mod constant;
 pub mod storage;
 pub mod types;
 
-pub use crate::error::Error;
 pub use crate::cons::{Control, MsgBuilder, SdconsOption};
+pub use crate::error::Error;
 pub use crate::raw_node::{
     AdvanceTemplate, LogReader, PostReady, RawNode, RoleObserver, WriteTask,
 };

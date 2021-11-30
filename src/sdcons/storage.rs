@@ -17,10 +17,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use std::collections::{HashMap, HashSet, VecDeque};
+use std::collections::{HashMap, VecDeque};
 use std::ops::Index;
 
-use log::{debug, error, info, trace, warn};
+use log::{debug, info, trace};
 
 use crate::constant::*;
 use crate::types::*;
